@@ -1,3 +1,3 @@
 #!/bin/sh
 #
-docker run -dp 5555:5555 microsvcruntime:v1
+docker run -dp 5107:5555 microsvcruntime:v1
