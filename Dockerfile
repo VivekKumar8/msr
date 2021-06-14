@@ -6,7 +6,7 @@ RUN echo "Argument is $WmJDBCAdapter"
 RUN echo "Argument is $WmCloudStreamsAnalytics"
 
 RUN if [ "$WmCloudStreamsAnalytics" = true ] ; then \
-echo WmCloudStreamsAnalytics is selected*****;
+echo WmCloudStreamsAnalytics is selected*****; \
 COPY /packages/wMPackages/WmCloudStreamsAnalytics /opt/softwareag/IntegrationServer/packages/WmCloudStreamsAnalytics \
 else \
 echo WmCloudStreamsAnalytics not selected; \
