@@ -10,7 +10,8 @@ pipeline {
 		stage('Build'){
             steps {
 		    echo " The environment is ${params.WmCloudStreamsAnalytics}"
-                sh "${WORKSPACE}/Build.sh ${params.WmJDBCAdapter} ${params.WmCloudStreamsAnalytics}"
+                //sh "${WORKSPACE}/Build.sh ${params.WmJDBCAdapter} ${params.WmCloudStreamsAnalytics}"
+		    sh "${WORKSPACE}/Build.sh ${params.WmJDBCAdapter} /packages/wMPackages/WmCloudStreamsAnalytics"
             }
         }
 		stage('Deploy'){
