@@ -7,7 +7,7 @@ RUN echo "Argument is $WmCloudStreamsAnalytics"
 
 RUN if [ "$WmCloudStreamsAnalytics" = true ] ; then \
 echo WmCloudStreamsAnalytics is selected*****; \
-cp /packages/wMPackages/WmCloudStreamsAnalytics /opt/softwareag/IntegrationServer/packages/WmCloudStreamsAnalytics \
+COPY /packages/wMPackages/WmCloudStreamsAnalytics /opt/softwareag/IntegrationServer/packages/WmCloudStreamsAnalytics \
 else \
 echo WmCloudStreamsAnalytics not selected; \
 fi
