@@ -9,8 +9,8 @@ RUN if [ "$WmCloudStreamsAnalytics" = true ] ; then \
 echo WmCloudStreamsAnalytics is selected*****; \
 WmCloudStreamsAnalytics=WmCloudStreamsAnalytics \
 # COPY /packages/wMPackages/WmCloudStreamsAnalytics /opt/softwareag/IntegrationServer/packages/WmCloudStreamsAnalytics \
-else \
-echo WmCloudStreamsAnalytics not selected; \
+#else \
+#echo WmCloudStreamsAnalytics not selected; \
 fi
 # RUN if [[ -z "$WmCloudStreamsAnalytics" ]] ; then echo WmCloudStreamsAnalytics not selected ; else COPY /packages/wMPackages/WmCloudStreamsAnalytics /opt/softwareag/IntegrationServer/packages ; fi
 # RUN if [[ -n "$WmCloudStreamsAnalytics" ]] ; then COPY /packages/wMPackages/WmCloudStreamsAnalytics /opt/softwareag/IntegrationServer/packages; else echo WmCloudStreamsAnalytics not selected; fi
