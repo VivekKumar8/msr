@@ -9,7 +9,7 @@ RUN echo "Argument is $WmCloudStreamsAnalytics"
 RUN if [ "$WmCloudStreamsAnalytics" = true ] ; then \
 echo WmCloudStreamsAnalytics is selected*****; \
 #WmCloudStreamsAnalytics=WmCloudStreamsAnalytics \
-CMD COPY /packages/wMPackages/WmCloudStreamsAnalytics /opt/softwareag/IntegrationServer/packages/WmCloudStreamsAnalytics \
+CMD ["bash" "COPY /packages/wMPackages/WmCloudStreamsAnalytics /opt/softwareag/IntegrationServer/packages/WmCloudStreamsAnalytics"] \
 else \
 echo WmCloudStreamsAnalytics not selected; \
 fi
