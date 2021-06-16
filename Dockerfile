@@ -2,7 +2,7 @@ FROM store/softwareag/webmethods-microservicesruntime:10.7
 ARG WmJDBCAdapter
 ARG WmCloudStreamsAnalytics
 ARG WmCloudStreamsAnalytics1=/packages/wMPackages/WmCloudStreamsAnalytics
-ENV WmCloudStreamsAnalytics1=${WmCloudStreamsAnalytics}
+#ENV WmCloudStreamsAnalytics1=${WmCloudStreamsAnalytics}
 
 RUN echo "Argument is $WmJDBCAdapter"
 RUN echo "Argument is $WmCloudStreamsAnalytics"
