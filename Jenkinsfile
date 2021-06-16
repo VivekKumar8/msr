@@ -11,7 +11,7 @@ pipeline {
             steps {
 		    echo " The environment is ${params.WmCloudStreamsAnalytics}"
 		    script {
-    if (${params.WmCloudStreamsAnalytics} == true) {
+    if (params.WmCloudStreamsAnalytics == true) {
        echo " The environment inside script is ${params.WmCloudStreamsAnalytics}"
     }
 }
