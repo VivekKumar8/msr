@@ -1,6 +1,6 @@
 FROM store/softwareag/webmethods-microservicesruntime:10.7
-ARG WmJDBCAdapter
-ARG WmCloudStreamsAnalytics
+#ARG WmJDBCAdapter
+#ARG WmCloudStreamsAnalytics
 ENV WmCloudStreamsAnalytics1 /packages/wMPackages/WmCloudStreamsAnalytics
 #ENV WmCloudStreamsAnalytics1=${WmCloudStreamsAnalytics}
 
@@ -22,5 +22,5 @@ RUN echo "Argument is $WmCloudStreamsAnalytics1"
 #COPY /packages/wMPackages/WmCloudStreamsAnalytics /opt/softwareag/IntegrationServer/packages
 #ARG WmCloudStreamsAnalytics1
 #ARG WmCloudStreamsAnalytics10=/packages/wMPackages/WmCloudStreamsAnalytics
-COPY ${WmCloudStreamsAnalytics1} /opt/softwareag/IntegrationServer/packages/WmCloudStreamsAnalytics
+COPY ${WmCloudStreamsAnalytics1} /opt/softwareag/IntegrationServer/packages/${WmCloudStreamsAnalytics1}/WmCloudStreamsAnalytics
 COPY /packages/customPackages /opt/softwareag/IntegrationServer/packages
