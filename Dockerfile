@@ -3,7 +3,7 @@ FROM store/softwareag/webmethods-microservicesruntime:10.7
 MAINTAINER Vivek
 
 ENV CP=/packages/wMPackages
-ENV FPATH=WmCloudStreamsAnalytics
+ENV FPATH=Demo
 
 #RUN groupadd -g 1724 sagadmin; useradd -u 1724 -m -g 1724 -d ${SAG_HOME} sagadmin
 #USER 1724
@@ -30,5 +30,5 @@ RUN echo "Argument is $WmCloudStreamsAnalytics1"
 #COPY /packages/wMPackages/WmCloudStreamsAnalytics /opt/softwareag/IntegrationServer/packages
 #ARG WmCloudStreamsAnalytics1
 #ARG WmCloudStreamsAnalytics10=/packages/wMPackages/WmCloudStreamsAnalytics ////${SAG_HOME}/
-COPY /packages/wMPackages /opt/softwareag/IntegrationServer/packages
+COPY /packages/wMPackages/${FPATH} /opt/softwareag/IntegrationServer/packages/Demo
 COPY /packages/customPackages /opt/softwareag/IntegrationServer/packages
