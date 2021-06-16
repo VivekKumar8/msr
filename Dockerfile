@@ -23,7 +23,7 @@ RUN echo "Argument is $WmCloudStreamsAnalytics1"
 #RUN if [[ -z "$WmCloudStreamsAnalytics" ]] ; then WmCloudStreamsAnalytics=WmCloudStreamsAnalytics ; else WmCloudStreamsAnalytics=WmCloudStreamsAnalytics ; fi
 #RUN echo $WmCloudStreamsAnalytics
 #RUN if [[ -n "$WmCloudStreamsAnalytics" ]] ; then COPY /packages/wMPackages/${FPATH} /opt/softwareag/IntegrationServer/packages/${FPATH}; else echo WmCloudStreamsAnalytics not selected; fi
-RUN if [[ -z "WmCloudStreamsAnalytics" ]] ; then COPY /packages/wMPackages/${FPATH} /opt/softwareag/IntegrationServer/packages/${FPATH} ; else echo WmCloudStreamsAnalytics not selected; fi
+RUN if [[ -z "$WmCloudStreamsAnalytics" ]] ; then COPY /packages/wMPackages/${FPATH} /opt/softwareag/IntegrationServer/packages/${FPATH} ; else echo WmCloudStreamsAnalytics not selected; fi
 #COPY /packages/wMPackages/WmCloudStreamsAnalytics /opt/softwareag/IntegrationServer/packages
 #ARG WmCloudStreamsAnalytics1
 #ARG WmCloudStreamsAnalytics10=/packages/wMPackages/WmCloudStreamsAnalytics ////${SAG_HOME}/
