@@ -3,7 +3,7 @@ FROM store/softwareag/webmethods-microservicesruntime:10.7
 MAINTAINER Vivek
 
 ENV CP=/packages/wMPackages
-ENV FPATH=Demo
+ARG FPATH=Demo
 
 #RUN groupadd -g 1724 sagadmin; useradd -u 1724 -m -g 1724 -d ${SAG_HOME} sagadmin
 #USER 1724
