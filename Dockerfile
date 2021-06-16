@@ -5,8 +5,8 @@ MAINTAINER Vivek
 ENV CP=/packages/wMPackages
 ENV FPATH=WmCloudStreamsAnalytics
 
-RUN groupadd -g 1724 sagadmin; useradd -u 1724 -m -g 1724 -d ${SAG_HOME} sagadmin
-USER 1724
+#RUN groupadd -g 1724 sagadmin; useradd -u 1724 -m -g 1724 -d ${SAG_HOME} sagadmin
+#USER 1724
 #ARG WmJDBCAdapter
 #ARG WmCloudStreamsAnalytics
 ENV WmCloudStreamsAnalytics1 /packages/wMPackages/WmCloudStreamsAnalytics
@@ -30,5 +30,5 @@ RUN echo "Argument is $WmCloudStreamsAnalytics1"
 #COPY /packages/wMPackages/WmCloudStreamsAnalytics /opt/softwareag/IntegrationServer/packages
 #ARG WmCloudStreamsAnalytics1
 #ARG WmCloudStreamsAnalytics10=/packages/wMPackages/WmCloudStreamsAnalytics ////${SAG_HOME}/
-COPY --chown=1724:1724 /packages/wMPackages/${FPATH} /opt/softwareag/IntegrationServer/packages/${FPATH}/WmCloudStreamsAnalytics
+COPY /packages/wMPackages/${FPATH} /opt/softwareag/IntegrationServer/packages/${FPATH}/WmCloudStreamsAnalytics
 COPY /packages/customPackages /opt/softwareag/IntegrationServer/packages
