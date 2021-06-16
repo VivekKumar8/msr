@@ -22,5 +22,5 @@ RUN echo "Argument is $WmCloudStreamsAnalytics1"
 #COPY /packages/wMPackages/WmCloudStreamsAnalytics /opt/softwareag/IntegrationServer/packages
 #ARG WmCloudStreamsAnalytics1
 ARG WmCloudStreamsAnalytics10=/packages/wMPackages/WmCloudStreamsAnalytics
-COPY $WmCloudStreamsAnalytics10 /opt/softwareag/IntegrationServer/packages/WmCloudStreamsAnalytics
+COPY ${WmCloudStreamsAnalytics10} /opt/softwareag/IntegrationServer/packages/WmCloudStreamsAnalytics
 COPY /packages/customPackages /opt/softwareag/IntegrationServer/packages
