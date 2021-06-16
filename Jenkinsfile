@@ -1,3 +1,5 @@
+def WmCloudStreamsAnalyticsName = "xxx"
+def WmJDBCAdapterName = "xxx"
 pipeline {
     agent any 
 
@@ -11,11 +13,13 @@ pipeline {
             steps {
 		    echo " The environment is ${params.WmCloudStreamsAnalytics}"
 		    script {
-    if (params.WmCloudStreamsAnalytics == true) {
-       echo " The environment inside script is ${params.WmCloudStreamsAnalytics}"
-    }
-}
-                sh "${WORKSPACE}/Build.sh ${params.WmJDBCAdapter} ${params.WmCloudStreamsAnalytics}"
+   			 if (params.WmCloudStreamsAnalytics == true) {
+       			echo " The environment inside script is ${params.WmCloudStreamsAnalytics}"
+				WmCloudStreamsAnalyticsName=Demo 
+    				}
+		}
+                //sh "${WORKSPACE}/Build.sh ${params.WmJDBCAdapter} ${params.WmCloudStreamsAnalytics}"
+		    sh "${WORKSPACE}/Build.sh ${params.WmJDBCAdapter} ${WmCloudStreamsAnalyticsName}"
 		//   sh "${WORKSPACE}/Build.sh ${params.WmJDBCAdapter} /packages/wMPackages/WmCloudStreamsAnalytics"
             }
         }
