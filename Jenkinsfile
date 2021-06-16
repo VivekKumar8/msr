@@ -1,5 +1,5 @@
-def WmCloudStreamsAnalyticsName = "xxx"
-def WmJDBCAdapterName = "xxx"
+def WmCloudStreamsAnalyticsName = "xxxx"
+def WmJDBCAdapterName = "xxxx"
 pipeline {
     agent any 
 
