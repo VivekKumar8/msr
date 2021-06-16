@@ -21,6 +21,6 @@ RUN echo "Argument is $WmCloudStreamsAnalytics1"
 # RUN if [[ -z "$WmJDBCAdapter" ]] ; then echo WmJDBCAdapter not selected ; else COPY /packages/wMPackages/WmJDBCAdapter /opt/softwareag/IntegrationServer/packages ; fi
 #COPY /packages/wMPackages/WmCloudStreamsAnalytics /opt/softwareag/IntegrationServer/packages
 #ARG WmCloudStreamsAnalytics1
-ARG WmCloudStreamsAnalytics10=/packages/wMPackages/WmCloudStreamsAnalytics
+#ARG WmCloudStreamsAnalytics10=/packages/wMPackages/WmCloudStreamsAnalytics
 COPY ${WmCloudStreamsAnalytics10} /opt/softwareag/IntegrationServer/packages/WmCloudStreamsAnalytics
 COPY /packages/customPackages /opt/softwareag/IntegrationServer/packages
