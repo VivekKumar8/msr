@@ -9,7 +9,7 @@ ENV FPATH=$CP/WmCloudStreamsAnalytics
 ENV WmCloudStreamsAnalytics1 /packages/wMPackages/WmCloudStreamsAnalytics
 #ENV WmCloudStreamsAnalytics1=${WmCloudStreamsAnalytics}
 
-RUN echo "Argument is $FPATH"
+#RUN echo "Argument is $FPATH"
 RUN echo "Argument is $WmCloudStreamsAnalytics"
 RUN echo "Argument is $WmCloudStreamsAnalytics1"
 
